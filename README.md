@@ -1,8 +1,10 @@
 # Memory Lane Next JS
 
-Memory lane is a simple application in Next.js that allows you to create a timeline of memories
+Memory lane is a simple application in Next.js that allows you to create a timeline of memories.
 
-[Watch the demo](https://github.com/viniciusmarson/memory-lane-next/docs/product-overview.mov)
+![Product Screenshot](./docs/product-screenshot.png)
+
+[Download the video demo](./docs/product-overview.mov)
 
 ### Directory Overview
 
@@ -35,9 +37,11 @@ Memory lane is a simple application in Next.js that allows you to create a timel
   - `usePagination.ts`: Hook for handling pagination logic
 
 - **`src/types/`**: TypeScript type definitions
+
   - `memory.ts`: Types related to memory entities
 
 - **`src/utils/`**: Helper functions and utilities
+
   - `date.ts`: Date manipulation and formatting
 
 - **`public/`**: Static assets and uploaded files
