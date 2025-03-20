@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useCallback } from "react";
 import { Memory } from "@/types/memory";
-import { formatDate } from "@/utils/date_format";
+import { formatDate } from "@/utils/date";
 import { PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
 
 type MemoryCardProps = {
@@ -29,39 +29,39 @@ export default function MemoryCard({
   }, [onDelete, id]);
 
   return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm">
+    <div className="flex flex-col max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm h-130 w-80">
       <Link href={`/detail/${id}`}>
         <div className="relative w-full h-64">
           <Image src={image} alt={title} className="object-cover" fill />
         </div>
       </Link>
 
-      <div className="p-5">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+      <div className="flex flex-col gap-2 p-5">
+        <h5 className="text-2xl font-bold tracking-tight text-gray-900">
           {title}
         </h5>
-        <p className="text-gray-600 mb-1">{formatDate(date)}</p>
-        <p className="mb-3 font-normal text-gray-700">
-          {description}
-        </p>
 
-        <div className="flex gap-2 justify-center">
-          <button
-            className="text-black bg-transparent px-4 py-2 flex items-center gap-2 cursor-pointer hover:bg-gray-100"
-            onClick={handleEdit}
-          >
-            <PencilIcon className="size-4" />
-            Edit
-          </button>
+        <p className="text-gray-600">{formatDate(date)}</p>
 
-          <button
-            className="text-black bg-transparent px-4 py-2 flex items-center gap-2 cursor-pointer hover:bg-gray-100"
-            onClick={handleDelete}
-          >
-            <TrashIcon className="size-4" />
-            Delete
-          </button>
-        </div>
+        <p className="font-normal text-gray-700 line-clamp-3">{description}</p>
+      </div>
+
+      <div className="flex gap-2 mt-auto mb-2 justify-center">
+        <button
+          className="text-black bg-transparent px-4 py-2 flex items-center gap-2 cursor-pointer hover:bg-gray-100"
+          onClick={handleEdit}
+        >
+          <PencilIcon className="size-4" />
+          Edit
+        </button>
+
+        <button
+          className="text-black bg-transparent px-4 py-2 flex items-center gap-2 cursor-pointer hover:bg-gray-100"
+          onClick={handleDelete}
+        >
+          <TrashIcon className="size-4" />
+          Delete
+        </button>
       </div>
     </div>
   );

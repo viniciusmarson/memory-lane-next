@@ -1,10 +1,16 @@
 import Link from "next/link";
 import CreateMemoryForm from "@/components/containers/CreateMemoryForm";
 
+export const generateMetadata = () => {
+  return {
+    title: "Create memory | Memory Lane",
+  };
+};
+
 export default async function Home() {
   return (
     <main className="max-w-lg mx-auto p-4 text-center">
-      <h1 className="text-2xl font-bold mb-4">Create Memory</h1>
+      <h1 className="text-2xl font-bold mb-4">Create memory</h1>
 
       <CreateMemoryForm />
 

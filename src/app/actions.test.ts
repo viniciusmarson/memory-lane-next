@@ -11,7 +11,11 @@ import { db, memories } from "@/db/schema";
 jest.mock("@/db/schema", () => ({
   db: {
     insert: jest.fn(() => ({ values: jest.fn() })),
-    update: jest.fn(() => ({ set: jest.fn(), where: jest.fn() })),
+    update: jest.fn(() => ({
+      set: jest.fn().mockReturnValue({
+        where: jest.fn().mockResolvedValue(undefined),
+      }),
+    })),
     select: jest.fn(() => ({
       from: jest.fn(),
       where: jest.fn(),

@@ -12,6 +12,9 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* TODO: Add dark theme */
+/* In this POC, the dark theme will not be available */
+
 /*@media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

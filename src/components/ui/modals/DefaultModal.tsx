@@ -29,10 +29,20 @@ export default function DangerModal({
     info: InformationCircleIcon,
   };
 
-  const color = {
-    danger: "bg-red",
-    warning: "bg-yellow",
-    info: "bg-blue",
+  const iconContainerStyles = {
+    danger:
+      "mx-auto flex size-12 shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:size-10",
+    warning:
+      "mx-auto flex size-12 shrink-0 items-center justify-center rounded-full bg-yellow-100 sm:mx-0 sm:size-10",
+    info: "mx-auto flex size-12 shrink-0 items-center justify-center rounded-full bg-blue-100 sm:mx-0 sm:size-10",
+  };
+
+  const buttonStyles = {
+    danger:
+      "inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-500 sm:ml-3 sm:w-auto",
+    warning:
+      "inline-flex w-full justify-center rounded-md bg-yellow-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-yellow-500 sm:ml-3 sm:w-auto",
+    info: "inline-flex w-full justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 sm:ml-3 sm:w-auto",
   };
 
   return (
@@ -52,9 +62,7 @@ export default function DangerModal({
           <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
             <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
               <div className="sm:flex sm:items-start">
-                <div
-                  className={`mx-auto flex size-12 shrink-0 items-center justify-center rounded-full ${color[type]}-100 sm:mx-0 sm:size-10`}
-                >
+                <div className={iconContainerStyles[type]}>
                   <div className="size-6 text-red-600">
                     {React.createElement(icon[type])}
                   </div>
@@ -75,7 +83,7 @@ export default function DangerModal({
             <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
               <button
                 type="button"
-                className={`inline-flex w-full justify-center rounded-md ${color[type]}-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-500 sm:ml-3 sm:w-auto`}
+                className={buttonStyles[type]}
                 onClick={onConfirm}
               >
                 {actionText}

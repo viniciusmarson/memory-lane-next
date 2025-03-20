@@ -44,9 +44,7 @@ export default function MemoryList({ memories }: MemoryListProps) {
 
   return (
     <>
-      {memories.length === 0 && <p>No memories yet</p>}
-
-      <ul className="flex flex-wrap gap-8 justify-center">
+      <ul className="flex flex-wrap gap-8 justify-center md:justify-start">
         {memories.map((memory) => (
           <MemoryCard
             key={memory.id}

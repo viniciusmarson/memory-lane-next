@@ -28,7 +28,7 @@ export default function CreateMemoryForm() {
 
       if (!uploadResponse.ok) {
         const message = await uploadResponse.json();
-        showAlert("Failed to upload image.", "error", 3000);
+        showAlert(message.error, "error", 3000);
         throw new Error(message);
       }
 
