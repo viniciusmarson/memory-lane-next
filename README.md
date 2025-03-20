@@ -2,6 +2,8 @@
 
 Memory lane is a simple application in Next.js that allows you to create a timeline of memories
 
+[Watch the demo](https://github.com/viniciusmarson/memory-lane-next/docs/product-overview.mov)
+
 ### Directory Overview
 
 - **`src/app/`**: Contains the main application code using Next.js App Router
