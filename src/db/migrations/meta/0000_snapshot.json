@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "d52751e5-a1d0-4781-ae37-209a47d6990b",
+  "id": "0a3cdd29-d66c-41d3-bc28-802c38ce312f",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "memories": {
@@ -16,16 +16,16 @@
         },
         "title": {
           "name": "title",
-          "type": "text",
+          "type": "text(100)",
           "primaryKey": false,
           "notNull": true,
           "autoincrement": false
         },
         "description": {
           "name": "description",
-          "type": "text",
+          "type": "text(1000)",
           "primaryKey": false,
-          "notNull": false,
+          "notNull": true,
           "autoincrement": false
         },
         "image": {

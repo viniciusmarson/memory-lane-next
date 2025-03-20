@@ -5,6 +5,7 @@ import DefaultLink from "@/components/ui/links/DefaultLink";
 import MemoryList from "@/components/containers/MemoryList";
 import SortControls from "@/components/ui/controls/SortControls";
 import PaginationControls from "@/components/ui/controls/PaginationControls";
+import { EmptyState } from "@/components/ui/texts/EmptyState";
 
 type HomeProps = {
   searchParams: { page?: number; limit?: number; sort?: Sort };
@@ -37,13 +38,10 @@ export default async function Home({ searchParams }: HomeProps) {
       </div>
 
       {memories.length === 0 && (
-        <div className="flex flex-col gap-2 text-center">
-          <h1 className="text-2xl font-bold">No memories found</h1>
-          <p className="text-gray-500">
-            Start creating memories by clicking the button{" "}
-            <strong>+ New memory</strong> above.
-          </p>
-        </div>
+        <EmptyState
+          title="No memories found"
+          description="Start creating memories by clicking the button + New memory above."
+        />
       )}
 
       <MemoryList memories={memories} />

@@ -153,7 +153,11 @@ export default function MemoryForm({ memory, onSubmit }: MemoryFormProps) {
 
       {errors && <p className={styles.errorText}>{errors}</p>}
 
-      <button type="submit" className={styles.button} disabled={uploading}>
+      <button
+        type="submit"
+        className={styles.button}
+        disabled={uploading || !!errors}
+      >
         {uploading ? "Loading..." : "Confirm"}
       </button>
     </form>
