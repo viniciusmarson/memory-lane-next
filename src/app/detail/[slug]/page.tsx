@@ -12,6 +12,7 @@ export const generateMetadata = () => {
   };
 };
 
+// TODO: Implement a better design for the details page
 export default async function DetailsPage({ params }: DetailsPageProps) {
   const { slug } = await params;
   const memory = await getMemory(Number(slug));
@@ -21,32 +22,35 @@ export default async function DetailsPage({ params }: DetailsPageProps) {
   }
 
   return (
-    <div className="flex flex-col gap-4 items-start">
-      <Link href="/" className="text-blue-500">
-        Back to home
-      </Link>
-
-      <div className="flex gap-4 items-center">
-        <Image
-          src={memory.image}
-          alt={memory.title}
-          width={0}
-          height={0}
-          sizes="auto"
-          className="w-auto h-auto"
-        />
-
-        <div className="flex flex-col gap-4">
-          <h1>{memory.title}</h1>
-          <p>{memory.description}</p>
-          <p>{memory.date}</p>
-          <Link
-            href={`/edit/${memory.id}`}
-            className="bg-blue-500 text-white px-4 py-2 rounded-md text-center"
-          >
-            Edit
-          </Link>
+    <div className="flex flex-col gap-4 w-full items-center">
+      <div className="flex flex-col gap-4 items-center">
+        <div className="flex justify-center">
+          <Image
+            src={memory.image}
+            width={0} // auto width
+            height={0} // auto height
+            sizes="auto"
+            alt={memory.title}
+            className="object-contain w-auto h-auto"
+          />
         </div>
+
+        <div className="flex flex-col gap-4 items-center">
+          <h1 className="text-2xl font-bold">{memory.title}</h1>
+          <p className="text-gray-500">{memory.description}</p>
+          <p className="text-gray-500">{memory.date}</p>
+        </div>
+
+        <Link
+          href={`/edit/${memory.id}`}
+          className="bg-blue-500 text-white px-4 py-2 rounded-md text-center w-30"
+        >
+          Edit
+        </Link>
+
+        <Link href="/" className="text-blue-500">
+          Back to home
+        </Link>
       </div>
     </div>
   );
