@@ -43,4 +43,6 @@ next-env.d.ts
 public/uploads/*
 !public/uploads/.keep
 
+!.env.local
+
 database.sqlite
