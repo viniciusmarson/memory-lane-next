@@ -8,7 +8,7 @@ import PaginationControls from "@/components/ui/controls/PaginationControls";
 import { EmptyState } from "@/components/ui/texts/EmptyState";
 
 type HomeProps = {
-  searchParams: { page?: number; limit?: number; sort?: Sort };
+  searchParams: Promise<{ page?: number; limit?: number; sort?: Sort }>;
 };
 
 export const generateMetadata = () => {

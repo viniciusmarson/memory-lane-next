@@ -25,7 +25,7 @@ export default function EditMemoryForm({ memory }: EditMemoryFormProps) {
       showAlert("Memory updated successfully", "success", 3000);
       router.push("/");
     },
-    [memory.id, memory.image, router, showAlert]
+    [showAlert, memory.id, memory.image, router]
   );
 
   return <MemoryForm memory={memory} onSubmit={handleSubmit} />;

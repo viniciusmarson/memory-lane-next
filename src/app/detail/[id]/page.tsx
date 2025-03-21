@@ -3,7 +3,7 @@ import { getMemory } from "../../actions";
 import Link from "next/link";
 
 type DetailsPageProps = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
 export const generateMetadata = () => {

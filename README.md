@@ -17,6 +17,8 @@ Memory lane is a simple application in Next.js that allows you to create a timel
   - `detail/`: Page for memory details
   - `page.tsx`: Main home page component (List memories)
   - `layout.tsx`: Application layout for all pages
+  - `errors.tsx`: Handle unexpected application erros
+  - `loading.tsx`: Handle application loadings
 
 - **`src/components/`**: React components organized by purpose
 
@@ -89,6 +91,20 @@ To execute the unit tests run:
 
 ```bash
 yarn test
+```
+
+# Production version
+
+Run:
+
+```bash
+yarn build
+```
+
+Then:
+
+```bash
+yarn start
 ```
 
 ## Learn More

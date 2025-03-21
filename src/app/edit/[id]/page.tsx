@@ -3,7 +3,7 @@ import BackButton from "@/components/ui/buttons/BackButton";
 import EditMemoryForm from "@/components/containers/EditMemoryForm";
 
 type EditMemoryProps = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
 export const generateMetadata = () => {
