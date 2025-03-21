@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Memory } from "@/types/memory";
 import { formatDate } from "@/utils/date";
+import DefaultButton from "@/components/ui/buttons/DefaultButton";
 import { PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
 
 type MemoryCardProps = {
@@ -36,21 +37,15 @@ export default function MemoryCard({
       </div>
 
       <div className="flex gap-2 mt-auto mb-2 justify-center">
-        <button
-          className="text-black bg-transparent px-4 py-2 flex items-center gap-2 cursor-pointer hover:bg-gray-100"
-          onClick={() => onEdit(id)}
-        >
+        <DefaultButton onClick={() => onEdit(id)}>
           <PencilIcon className="size-4" />
           Edit
-        </button>
+        </DefaultButton>
 
-        <button
-          className="text-black bg-transparent px-4 py-2 flex items-center gap-2 cursor-pointer hover:bg-gray-100"
-          onClick={() => onDelete(id)}
-        >
+        <DefaultButton onClick={() => onDelete(id)}>
           <TrashIcon className="size-4" />
           Delete
-        </button>
+        </DefaultButton>
       </div>
     </div>
   );

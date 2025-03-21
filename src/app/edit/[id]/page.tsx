@@ -6,10 +6,8 @@ type EditMemoryProps = {
   params: Promise<{ id: string }>;
 };
 
-export const generateMetadata = () => {
-  return {
-    title: "Edit memory | Memory Lane",
-  };
+export const metadata = {
+  title: "Edit memory | Memory Lane",
 };
 
 export default async function EditMemory({ params }: EditMemoryProps) {

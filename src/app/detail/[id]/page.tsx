@@ -6,10 +6,8 @@ type DetailsPageProps = {
   params: Promise<{ id: string }>;
 };
 
-export const generateMetadata = () => {
-  return {
-    title: `Memory details | Memory Lane`,
-  };
+export const metadata = {
+  title: "Memory details | Memory Lane",
 };
 
 // TODO: Implement a better design for the details page
