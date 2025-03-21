@@ -1,11 +1,11 @@
 import { Sort } from "@/types/memory";
-import { getMemories } from "./actions";
+import MemoryList from "./components/MemoryList";
+import { getMemories } from "@/app/actions/memories";
 import { PlusIcon } from "@heroicons/react/24/outline";
-import DefaultLink from "@/components/ui/links/DefaultLink";
-import MemoryList from "@/components/containers/MemoryList";
-import SortControls from "@/components/ui/controls/SortControls";
-import PaginationControls from "@/components/ui/controls/PaginationControls";
-import { EmptyState } from "@/components/ui/texts/EmptyState";
+import DefaultLink from "@/components/links/DefaultLink";
+import { EmptyState } from "@/components/texts/EmptyState";
+import SortControls from "@/components/controls/SortControls";
+import PaginationControls from "@/components/controls/PaginationControls";
 
 type HomeProps = {
   searchParams: Promise<{ page?: number; limit?: number; sort?: Sort }>;

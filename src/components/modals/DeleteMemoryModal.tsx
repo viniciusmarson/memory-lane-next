@@ -1,4 +1,4 @@
-import DefaultModal from "@/components/ui/modals/DefaultModal";
+import DefaultModal from "@/components/modals/DefaultModal";
 
 type DeleteMemoryModalProps = {
   onConfirm: () => void;

@@ -3,10 +3,10 @@
 import { Memory } from "@/types/memory";
 import { useRouter } from "next/navigation";
 import { useAlert } from "@/hooks/useAlert";
-import { deleteMemory } from "@/app/actions";
 import { useCallback, useState } from "react";
-import MemoryCard from "../ui/cards/MemoryCard";
-import DeleteMemoryModal from "@/components/ui/modals/DeleteMemoryModal";
+import { deleteMemory } from "@/app/actions/memories";
+import MemoryCard from "@/components/cards/MemoryCard";
+import DeleteMemoryModal from "@/components/modals/DeleteMemoryModal";
 
 type MemoryListProps = {
   memories: Memory[];

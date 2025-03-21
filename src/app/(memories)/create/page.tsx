@@ -1,5 +1,5 @@
 import Link from "next/link";
-import CreateMemoryForm from "@/components/containers/CreateMemoryForm";
+import CreateMemoryForm from "./components/CreateMemoryForm";
 
 export const metadata = {
   title: "Create memory | Memory Lane",

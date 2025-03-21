@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { getMemory } from "../../actions";
 import Link from "next/link";
+import Image from "next/image";
+import { getMemory } from "@/app/actions/memories";
 
 type DetailsPageProps = {
   params: Promise<{ id: string }>;

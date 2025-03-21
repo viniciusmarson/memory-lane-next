@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { AlertProvider } from "@/contexts/alert";
 import { CubeIcon } from "@heroicons/react/20/solid";
 import { Geist, Geist_Mono } from "next/font/google";
-import SharePageButton from "@/components/ui/buttons/SharePageButton";
+import SharePageButton from "@/components/buttons/SharePageButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

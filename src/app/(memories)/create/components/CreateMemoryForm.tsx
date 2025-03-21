@@ -3,9 +3,9 @@
 import { useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { useAlert } from "@/hooks/useAlert";
-import { createMemory } from "@/app/actions";
+import { createMemory } from "@/app/actions/memories";
 import { MemoryFormData } from "@/types/memory";
-import MemoryForm from "../ui/forms/MemoryForm";
+import MemoryForm from "@/components/forms/MemoryForm";
 
 export default function CreateMemoryForm() {
   const router = useRouter();

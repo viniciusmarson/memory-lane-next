@@ -11,19 +11,21 @@ Memory lane is a simple application in Next.js that allows you to create a timel
 - **`src/app/`**: Contains the main application code using Next.js App Router
 
   - `api/`: API routes for handling server-side operations
-  - `actions.ts`: Server actions for database operations
-  - `create/`: Page for creating new memories
-  - `edit/`: Page for editing a memory
-  - `detail/`: Page for memory details
-  - `page.tsx`: Main home page component (List memories)
+  - `actions/`: Server actions for database operations
+  - `(memories)/create/`: Page for creating new memories
+  - `(memories)/edit/`: Page for editing a memory
+  - `(memories)/detail/`: Page for memory details
+  - `(root)/page.tsx`: Main home page component (List memories)
   - `layout.tsx`: Application layout for all pages
   - `errors.tsx`: Handle unexpected application erros
   - `loading.tsx`: Handle application loadings
 
-- **`src/components/`**: React components organized by purpose
+- **`src/components/`**: React UI components organized by type
 
-  - `containers/`: Complex components with business logic
-  - `ui/`: Reusable UI components
+  - `buttons/`: Application buttons
+  - `cards/`: Application cards
+  - `modals/`: Application modals
+  ....
 
 - **`src/context/`**: React Context providers for state management
 

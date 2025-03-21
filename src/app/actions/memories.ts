@@ -1,6 +1,6 @@
 "use server";
 
-import { Sort } from "../types/memory";
+import { Sort } from "../../types/memory";
 import { db, memories } from "@/db/schema";
 import { eq, desc, sql } from "drizzle-orm";
 import { z } from "zod";

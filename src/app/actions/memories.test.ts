@@ -4,7 +4,7 @@ import {
   getMemory,
   getMemories,
   deleteMemory,
-} from "./actions";
+} from "./memories";
 
 import { db, memories } from "@/db/schema";
 
