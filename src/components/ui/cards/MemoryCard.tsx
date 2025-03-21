@@ -1,8 +1,5 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import { useCallback } from "react";
 import { Memory } from "@/types/memory";
 import { formatDate } from "@/utils/date";
 import { PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
@@ -19,14 +16,6 @@ export default function MemoryCard({
   onDelete,
 }: MemoryCardProps) {
   const { id, title, description, image, date } = memory;
-
-  const handleEdit = useCallback(() => {
-    onEdit(id);
-  }, [onEdit, id]);
-
-  const handleDelete = useCallback(() => {
-    onDelete(id);
-  }, [onDelete, id]);
 
   return (
     <div className="flex flex-col max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm h-130 w-80">
@@ -49,7 +38,7 @@ export default function MemoryCard({
       <div className="flex gap-2 mt-auto mb-2 justify-center">
         <button
           className="text-black bg-transparent px-4 py-2 flex items-center gap-2 cursor-pointer hover:bg-gray-100"
-          onClick={handleEdit}
+          onClick={() => onEdit(id)}
         >
           <PencilIcon className="size-4" />
           Edit
@@ -57,7 +46,7 @@ export default function MemoryCard({
 
         <button
           className="text-black bg-transparent px-4 py-2 flex items-center gap-2 cursor-pointer hover:bg-gray-100"
-          onClick={handleDelete}
+          onClick={() => onDelete(id)}
         >
           <TrashIcon className="size-4" />
           Delete

@@ -1,8 +1,8 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useCallback } from "react";
 import { Sort } from "@/types/memory";
-
+import { useRouter } from "next/navigation";
 interface SortControlsProps {
   currentSort: Sort;
 }
@@ -10,10 +10,13 @@ interface SortControlsProps {
 export default function SortControls({ currentSort }: SortControlsProps) {
   const router = useRouter();
 
-  const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newSort = e.target.value as Sort;
-    router.push(`/?sort=${newSort}`);
-  };
+  const handleSortChange = useCallback(
+    (e: React.ChangeEvent<HTMLSelectElement>) => {
+      const newSort = e.target.value as Sort;
+      router.push(`/?sort=${newSort}`);
+    },
+    [router]
+  );
 
   return (
     <select

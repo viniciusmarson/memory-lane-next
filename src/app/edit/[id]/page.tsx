@@ -3,7 +3,7 @@ import BackButton from "@/components/ui/buttons/BackButton";
 import EditMemoryForm from "@/components/containers/EditMemoryForm";
 
 type EditMemoryProps = {
-  params: { slug: string };
+  params: { id: string };
 };
 
 export const generateMetadata = () => {
@@ -13,9 +13,8 @@ export const generateMetadata = () => {
 };
 
 export default async function EditMemory({ params }: EditMemoryProps) {
-  const { slug } = await params;
-  const id = parseInt(slug);
-  const memory = await getMemory(id);
+  const { id } = await params;
+  const memory = await getMemory(Number(id));
 
   if (!memory) {
     return <div>Memory not found</div>;

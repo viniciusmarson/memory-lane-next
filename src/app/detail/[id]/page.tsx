@@ -3,7 +3,7 @@ import { getMemory } from "../../actions";
 import Link from "next/link";
 
 type DetailsPageProps = {
-  params: { slug: string };
+  params: { id: string };
 };
 
 export const generateMetadata = () => {
@@ -14,8 +14,8 @@ export const generateMetadata = () => {
 
 // TODO: Implement a better design for the details page
 export default async function DetailsPage({ params }: DetailsPageProps) {
-  const { slug } = await params;
-  const memory = await getMemory(Number(slug));
+  const { id } = await params;
+  const memory = await getMemory(Number(id));
 
   if (!memory) {
     return <div>Memory not found</div>;
