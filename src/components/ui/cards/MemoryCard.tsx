@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Memory } from "@/types/memory";
 import { formatDate } from "@/utils/date";
-import DefaultButton from "@/components/buttons/DefaultButton";
+import DefaultButton from "@/components/ui/buttons/DefaultButton";
 import { PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
 
 type MemoryCardProps = {

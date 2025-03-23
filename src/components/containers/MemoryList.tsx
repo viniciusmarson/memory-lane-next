@@ -5,8 +5,8 @@ import { useRouter } from "next/navigation";
 import { useAlert } from "@/hooks/useAlert";
 import { useCallback, useState } from "react";
 import { deleteMemory } from "@/app/actions/memories";
-import MemoryCard from "@/components/cards/MemoryCard";
-import DeleteMemoryModal from "@/components/modals/DeleteMemoryModal";
+import MemoryCard from "@/components/ui/cards/MemoryCard";
+import DeleteMemoryModal from "@/components/containers/DeleteMemoryModal";
 
 type MemoryListProps = {
   memories: Memory[];

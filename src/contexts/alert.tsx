@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useState } from "react";
-import Alert from "@/components/alerts/DefaultAlert";
+import Alert from "@/components/ui/alerts/DefaultAlert";
 
 type AlertContextType = {
   alert: { message: string; type: string } | null;

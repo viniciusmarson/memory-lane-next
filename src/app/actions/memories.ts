@@ -1,9 +1,9 @@
 "use server";
 
-import { Sort } from "../../types/memory";
+import { z } from "zod";
+import { Sort } from "@/types/memory";
 import { db, memories } from "@/db/schema";
 import { eq, desc, sql } from "drizzle-orm";
-import { z } from "zod";
 
 const MemorySchema = z.object({
   title: z.string().min(1),

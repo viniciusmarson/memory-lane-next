@@ -1,15 +1,16 @@
 "use client";
 
-import { ShareIcon } from "@heroicons/react/24/outline";
+import { useCallback } from "react";
 import { useAlert } from "@/hooks/useAlert";
+import { ShareIcon } from "@heroicons/react/24/outline";
 
 export default function SharePageButton() {
   const { showAlert } = useAlert();
 
-  const handleClick = () => {
+  const handleClick = useCallback(() => {
     navigator.clipboard.writeText(window.location.href);
     showAlert("Link copied to clipboard", "success", 3000);
-  };
+  }, [showAlert]);
 
   return (
     <button

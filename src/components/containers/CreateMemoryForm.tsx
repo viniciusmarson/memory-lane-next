@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useAlert } from "@/hooks/useAlert";
 import { createMemory } from "@/app/actions/memories";
 import { MemoryFormData } from "@/types/memory";
-import MemoryForm from "@/components/forms/MemoryForm";
+import MemoryForm from "@/components/ui/forms/MemoryForm";
 
 export default function CreateMemoryForm() {
   const router = useRouter();

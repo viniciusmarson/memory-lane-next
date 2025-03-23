@@ -1,8 +1,8 @@
 "use client";
 
-import { isFutureDate, isNotValidDate } from "@/utils/date";
 import { useCallback, useState } from "react";
 import { Memory, MemoryFormData } from "@/types/memory";
+import { isFutureDate, isNotValidDate } from "@/utils/date";
 
 const styles = {
   label: "text-sm font-semibold text-black align-self-start",
@@ -18,7 +18,7 @@ type MemoryFormProps = {
 };
 
 const ONE_MB = 1024 * 1024;
-const MAX_FILE_SIZE = 5; // 5MB
+const MAX_FILE_SIZE_MB = 5;
 
 export default function MemoryForm({ memory, onSubmit }: MemoryFormProps) {
   const [title, setTitle] = useState(memory?.title || "");
@@ -48,9 +48,9 @@ export default function MemoryForm({ memory, onSubmit }: MemoryFormProps) {
         const file = e.target.files[0];
         const fileSizeMB = file.size / ONE_MB;
 
-        if (fileSizeMB > MAX_FILE_SIZE) {
+        if (fileSizeMB > MAX_FILE_SIZE_MB) {
           setErrors(
-            `File size exceeds ${MAX_FILE_SIZE}MB. File size: ${fileSizeMB.toFixed(
+            `File size exceeds ${MAX_FILE_SIZE_MB}MB. File size: ${fileSizeMB.toFixed(
               2
             )} MB`
           );

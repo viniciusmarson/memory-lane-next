@@ -1,6 +1,6 @@
 import { getMemory } from "@/app/actions/memories";
-import EditMemoryForm from "./components/EditMemoryForm";
-import BackButton from "@/components/buttons/BackButton";
+import BackButton from "@/components/ui/buttons/BackButton";
+import EditMemoryForm from "@/components/containers/EditMemoryForm";
 
 type EditMemoryProps = {
   params: Promise<{ id: string }>;

@@ -20,12 +20,10 @@ Memory lane is a simple application in Next.js that allows you to create a timel
   - `errors.tsx`: Handle unexpected application erros
   - `loading.tsx`: Handle application loadings
 
-- **`src/components/`**: React UI components organized by type
+- **`src/components/`**: React components organized by purpose
 
-  - `buttons/`: Application buttons
-  - `cards/`: Application cards
-  - `modals/`: Application modals
-  ....
+   - `containers/`: Complex components with business logic
+   - `ui/`: Reusable UI components
 
 - **`src/context/`**: React Context providers for state management
 

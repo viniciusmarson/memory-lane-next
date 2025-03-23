@@ -4,7 +4,7 @@ import { useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { useAlert } from "@/hooks/useAlert";
 import { updateMemory } from "@/app/actions/memories";
-import MemoryForm from "@/components/forms/MemoryForm";
+import MemoryForm from "@/components/ui/forms/MemoryForm";
 import { Memory, MemoryFormData } from "@/types/memory";
 type EditMemoryFormProps = {
   memory: Memory;
